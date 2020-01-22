@@ -1,0 +1,8 @@
+USE BandesDessinees;
+DROP TABLE toto;
+CREATE TABLE toto
+(
+    id INTEGER NOT NULL AUTO_INCREMENT,
+    nom VARCHAR(50),
+    CONSTRAINT users_pk PRIMARY KEY(id)
+);
