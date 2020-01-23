@@ -9,6 +9,7 @@ class Albums extends CI_Controller
 	
 	public function index()
 	{
+        $id = 0;
         $this->load->model('bdmodel');
         $list = bdmodel::getAll();
         $this->load->view('liste_albums',['list'=>$list]);

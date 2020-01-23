@@ -4,7 +4,7 @@
         </head>
         <body>
                 <h1>Détail de l'album</h1>
-               <!-- <pre><?php print_r ($album); ?></pre> -->
+                <pre><?php print_r ($album); ?></pre>
                 <div>       
                        
                         <img src="./couv/<?php echo $album ->couverture ?>.jpg" alt="couverture album" width="60" height="75"> 
