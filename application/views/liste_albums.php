@@ -4,12 +4,12 @@
         </head>
         <body>
                 <h1>Liste des Bandes dessinées au <?php echo date ('j F Y H:i') ?> </h1>
-       <!-- <pre><?php print_r($list); ?></pre>-->
+      
 
         <?php
         foreach ($list as $album)
         {?>
-          <div onclick="location.href='<?php echo site_url('detailalbum'); ?>'" style="cursor: pointer;">
+          <div onclick="location.href='<?php echo site_url('detailalbum/index/'.$album->id); ?>'" style="cursor: pointer;">
             <img src="./couv/<?php echo $album ->couverture ?>.jpg" alt="couverture album" width="60" height="75">
             <ul style="list-style-type: none">
               <li>Titre : <?php echo $album->titre ?></li>
