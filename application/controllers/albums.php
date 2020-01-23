@@ -9,6 +9,6 @@ class Albums extends CI_Controller
 	
 	public function index()
 	{
-		$this->load->view('liste_albums');
+        $this->load->view('liste_albums');
 	}
 }
