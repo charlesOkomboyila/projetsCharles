@@ -9,7 +9,7 @@
         <?php
         foreach ($list as $album)
         {?>
-          <div onclick="location.href='<?php echo base_url('detailalbum/index/').$album->id; ?>'" style="cursor: pointer;">
+          <div onclick="location.href='<?php echo base_url('detailalbum/index/').$album->id; ?>'" style="cursor: pointer;" onmouseover="this.style.background='#cccccc22';" onmouseout="this.style.background=''" onmousedown="this.style.background='#cccccc';" onmouseup="this.style.background='#cccccc22'" >
             <img src="./couv/<?php echo $album ->couverture ?>.jpg" alt="couverture album" width="60" height="75">
             <ul style="list-style-type: none">
               <li>Titre : <?php echo $album->titre ?></li>
