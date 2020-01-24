@@ -5,8 +5,9 @@ class DetailAlbum extends CI_Controller
 {
 	public function index($id)
 	{
-                $this->load->model("bdmodel");
-                $data['album'] = $this->bdmodel->by_id($id);
-                $this->load->view('detail_album',['album'=>$data['album'][0]]);
+        echo "Id de la BD : $id<br>";
+        $this->load->model("bdmodel");
+        
+        $this->load->view('detail_album',['album'=>$this->bdmodel->by_id($id)[0]]);
 	}
 }

@@ -5,7 +5,7 @@ class bdModel extends CI_Model
 
     function by_id($id)
     {
-        $query = $this ->db->select("bd.titre as titre, bd.prix_public as prix, GROUP_CONCAT(a.nom SEPARATOR ' / ') as auteur, ref as couverture, bd.ref_fournisseur as ISBN, bd.resume as resume, hero.nom as hero, genre.nom as genre, fournisseur.nom as fournisseur, editeur.nom as editeur ")
+        $query = $this->db->select("bd.titre as titre, bd.prix_public as prix, GROUP_CONCAT(a.nom SEPARATOR ' / ') as auteur, ref as couverture, bd.ref_fournisseur as ISBN, bd.resume as resume, hero.nom as hero, genre.nom as genre, fournisseur.nom as fournisseur, editeur.nom as editeur ")
         ->from("bd")
         ->where("bd.id=$id")
         ->join("auteur_bd","bd.id=auteur_bd.bd_id")
@@ -14,11 +14,9 @@ class bdModel extends CI_Model
         ->join("genre","genre.id=bd.genre_id")
         ->join("fournisseur", "fournisseur.id=bd.fournisseur_id")
         ->join("editeur", "editeur.id=bd.editeur_id")
-        ->limit(1)
         ->get();
 
-        $result = $query->result();
-        return $result;
+        return $query->result();
     }
 
     public function getAll()
