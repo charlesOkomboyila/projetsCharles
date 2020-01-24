@@ -7,7 +7,7 @@
                 <pre><?php print_r ($album); ?></pre>
                 <div>       
                        
-                        <img src="./couv/<?php echo $album ->couverture ?>.jpg" alt="couverture album" width="60" height="75"> 
+                        <img src="../../../couv/<?php echo $album ->couverture ?>.jpg" alt="couverture album" width="60" height="75"> 
                         <ul style="list-style-image: none">
                                 <li>Titre : <?php echo $album->titre ?></li>
                                 <li>Auteur(s) : <?php echo $album ->auteur ?></li>
